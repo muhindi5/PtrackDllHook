@@ -23,5 +23,8 @@
     <ClCompile Include="DllHookMain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\GitHubVisualStudio\ptrack_VS\pTrack\Dispatch.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

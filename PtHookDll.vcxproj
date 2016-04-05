@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\GitHubVisualStudio\ptrack_VS\pTrack\Dispatch.h" />
     <ClInclude Include="WinHook.h" />
   </ItemGroup>
   <ItemGroup>
